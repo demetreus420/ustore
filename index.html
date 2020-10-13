@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tobaco market for smoking people.">
+    <title>smoKING</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width">
+</head>
+
+<body>
+    <!-- <img src="./images/pipe.svg" style="height: 30px; width: 30px;" alt=""> -->
+    <header class="header">
+        <div class="container">
+            <div class="header__title">
+                <div class="phone-number">
+                    <span>phone: +</span><a href="tel:+3806667778">38 066 6 7778</a>
+                </div>
+                <div class="cart">
+                    <img src="./images/cart.svg" alt="">
+                    <div class="cart__buy">
+                        <span class="is-empty">
+                            Shopping cart is empty!
+                        </span>
+                        <div class="total-price-block">
+                            Total price: <span class="total-price">0</span>$
+                        </div>
+                    </div>
+                </div>
+                <ul class="header__title__menu">
+                    <li class="title__menu-item"><a href="./index.html">Home</a></li>
+                    <li class="title__menu-item"><a href="./about.html">About</a></li>
+                    <li class="title__menu-item"><a href="#">Contacts</a></li>
+                </ul>
+                <div class="logo-wrapper">
+                    <div class="logo">
+                        <a href="./index.html">smo<span>KING</span></a>
+                    </div>
+                </div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <form class="header__search-form" name="search" action="">
+                    <input class="search-bar" type="text" name="search_bar" id="">
+                    <input class="search-start" type="submit" onclick="searchFunc()" value="SEARCH">
+                </form>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <div class="container">
+            <div class="main__content">
+                <div class="main__sidebar">
+                    <div class="header__search">
+                        <form class="search__filters" action="">
+                            <span>Tobaco:</span><input type="checkbox" onclick="searchFunc()" name="" id="Tobaco"><br>
+                            <span>Filters:</span><input type="checkbox" onclick="searchFunc()" name="" id="Filters"><br>
+                            <span>Cigares:</span><input type="checkbox" onclick="searchFunc()" name="" id="Cigares"><br>
+                            <span>Papper:</span><input type="checkbox" onclick="searchFunc()" name="" id="Papper"><br>
+                            
+                            <label for="availableProdYes">Only Available</label>
+                            <input type="radio" checked="true" id="availableProdYes" onchange="searchFunc()" name="availableProd" value="yes">
+                            <br>
+                            <label for="availableProdNo">Only Unvailable</label>
+                            <input type="radio" id="availableProdNo" onchange="searchFunc()" name="availableProd" value="no">
+                            <br>
+                            <label for="availableProdAll">All</label>
+                            <input type="radio" id="availableProdAll" onchange="searchFunc()" name="availableProd" value="all">
+                            <br>
+
+                            <span>Max cost:</span><span id="mx_cost-val">0</span><br>
+                            
+                            <input type="range" name="" onclick="searchFunc()" id="mx_cost" step="100" value="0"
+                                onchange="mx_cost_change()" min="0" max="1000">
+                            <span>Min cost:</span><span id="mn_cost-val">0</span><br>
+                            <input type="range" name="" onclick="searchFunc()" id="mn_cost" step="10" value="0"
+                                onchange="mn_cost_change()" min="0" max="1000">
+                        </form>
+                    </div>
+                </div>
+                <div class="main__products">
+
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="content">
+                Copyright © 2020 | smoKING | All Rights Reserved
+                Terms of Servise | Privacy Policy
+            </div>
+        </div>
+    </footer>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
